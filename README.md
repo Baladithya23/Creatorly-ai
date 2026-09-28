@@ -1,3 +1,9 @@
+Problem Statemnt:-Social Media Engagement agent
+Learns which post styles, topics,
+and timing drive engagement for
+your specific audience.
+Remembers past conversations
+and community sentiment.
 # Creatorly 🧠
 
 **Your AI agent that learns what your audience loves.**
