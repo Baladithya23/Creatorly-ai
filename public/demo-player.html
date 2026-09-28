@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creatorly — Demo Video</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #0A0A0B;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .logo-badge {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #0d9488, #0f766e);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 15px;
+      color: white;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: -0.5px;
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #f4f4f5;
+      text-align: center;
+      margin-bottom: 6px;
+      letter-spacing: -0.4px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #71717a;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .video-wrapper {
+      width: 100%;
+      max-width: 1100px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #27272a;
+      box-shadow: 0 0 0 1px #18181b, 0 24px 80px rgba(0,0,0,0.6);
+      background: #18181b;
+      position: relative;
+    }
+
+    .video-bar {
+      background: #18181b;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid #27272a;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    .dot.red    { background: #ef4444; }
+    .dot.yellow { background: #eab308; }
+    .dot.green  { background: #22c55e; }
+
+    .url-bar {
+      flex: 1;
+      background: #09090b;
+      border: 1px solid #27272a;
+      border-radius: 6px;
+      padding: 4px 12px;
+      font-size: 12px;
+      color: #52525b;
+      font-family: monospace;
+      margin-left: 8px;
+    }
+
+    img.demo {
+      width: 100%;
+      display: block;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid #134e4a;
+      background: rgba(13,148,136,0.08);
+      color: #2dd4bf;
+      margin-top: 20px;
+      letter-spacing: 0.01em;
+    }
+
+    .badge::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background: #0d9488;
+      border-radius: 50%;
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.75); }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <div class="logo-badge">Cr</div>
+    <span class="logo-name">Creatorly</span>
+  </div>
+
+  <h1>Product Demo Walkthrough</h1>
+  <p class="subtitle">End-to-end demo — all 8 pages of the Creatorly AI agent platform</p>
+
+  <div class="video-wrapper">
+    <div class="video-bar">
+      <div class="dot red"></div>
+      <div class="dot yellow"></div>
+      <div class="dot green"></div>
+      <div class="url-bar">localhost:3001 — Creatorly Demo</div>
+    </div>
+    <img class="demo" src="http://localhost:4321" alt="Creatorly Full Demo" />
+  </div>
+
+  <div class="badge">Live animated demo — auto-playing</div>
+</body>
+</html>

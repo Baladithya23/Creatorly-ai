@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base Setup ───────────────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    --font-inter: 'Inter', sans-serif;
+  }
+
+  html {
+    @apply bg-zinc-950 text-zinc-100 scroll-smooth antialiased;
+    font-family: var(--font-inter);
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-zinc-950 text-zinc-100 min-h-screen selection:bg-teal-500/20 selection:text-teal-300;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+/* ── Custom Scrollbar ─────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0a0a0b; }
+::-webkit-scrollbar-thumb { background: #27272a; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+
+/* ── Component Utilities ──────────────────────────────────────────────────── */
+@layer components {
+  /* Clean Card with 1px border */
+  .card-base {
+    @apply bg-zinc-900/60 border border-zinc-800/80 rounded-xl p-6 transition-all duration-150;
+  }
+  
+  .card-interactive {
+    @apply card-base hover:border-zinc-700/80 hover:bg-zinc-900/90;
+  }
+
+  /* Primary Button - Solid Accent Teal */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-medium text-sm text-white
+           bg-teal-600 hover:bg-teal-500 active:bg-teal-700
+           transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-teal-500/40 focus:ring-offset-2 focus:ring-offset-zinc-950
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-teal-600;
+  }
+
+  /* Secondary Button - Ghost/Outline */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-medium text-sm text-zinc-300
+           bg-zinc-900/80 hover:bg-zinc-800 hover:text-white border border-zinc-800 hover:border-zinc-700
+           transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-zinc-700 focus:ring-offset-2 focus:ring-offset-zinc-950
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Input Fields */
+  .input-field {
+    @apply w-full px-3.5 py-2.5 rounded-lg bg-zinc-900/90 border border-zinc-800
+           text-zinc-100 placeholder-zinc-500 text-sm
+           focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500
+           transition-colors duration-150;
+  }
+
+  .select-field {
+    @apply input-field appearance-none cursor-pointer pr-10;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2371717a' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+  }
+
+  .textarea-field {
+    @apply input-field resize-none;
+  }
+
+  .form-label {
+    @apply block text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-1.5;
+  }
+
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-widest text-teal-400 mb-2 block;
+  }
+
+  .page-title {
+    @apply text-2xl sm:text-3xl font-bold tracking-tight text-white mb-2;
+  }
+
+  .page-desc {
+    @apply text-sm text-zinc-400 max-w-2xl leading-relaxed;
+  }
+
+  .metric-value {
+    @apply text-3xl sm:text-4xl font-bold tracking-tight text-white;
+  }
+}
+
+/* ── Skeleton Shimmer Loading ─────────────────────────────────────────────── */
+.skeleton-box {
+  @apply bg-zinc-800/60 rounded animate-pulse-subtle;
+}

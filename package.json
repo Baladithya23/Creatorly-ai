@@ -1,0 +1,33 @@
+{
+  "name": "creatorly",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "seed": "npx ts-node --project tsconfig.seed.json scripts/seed-data.ts",
+    "test": "npx ts-node --project tsconfig.seed.json scripts/test-backend.ts"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.11.1",
+    "next": "14.2.29",
+    "react": "^18",
+    "react-dom": "^18",
+    "recharts": "^3.10.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "dotenv": "^18.0.4",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.29",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "ts-node": "^10",
+    "typescript": "^5"
+  }
+}
