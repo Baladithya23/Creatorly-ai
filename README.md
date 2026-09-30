@@ -7,6 +7,7 @@ and community sentiment.
 # Creatorly 🧠
 
 **Your AI agent that learns what your audience loves.**
+Live Demo :- https://creatorly-ai-chi.vercel.app/
 
 Creatorly is a Next.js 14 application that uses **Hindsight** (a persistent memory API by Vectorize) to give an AI agent real, long-term memory of your social media performance. The more posts you log, the better the suggestions become — because the agent actually *remembers* what worked for your specific audience.
 
