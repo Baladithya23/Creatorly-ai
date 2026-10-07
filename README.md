@@ -29,7 +29,7 @@ Creatorly is a Next.js 14 application that uses **Hindsight** (a persistent memo
 
 ## Performance Analytics Note
 
-> ℹ️ **Hackathon Note:** In this hackathon version, analytics are generated from posts you log directly into Hindsight memory. A production version would connect directly to Instagram/YouTube via OAuth once platform API approval is obtained.
+
 
 ---
 
